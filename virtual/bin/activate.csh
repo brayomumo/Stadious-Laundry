@@ -8,7 +8,11 @@ alias deactivate 'test $?_OLD_VIRTUAL_PATH != 0 && setenv PATH "$_OLD_VIRTUAL_PA
 # Unset irrelevant variables.
 deactivate nondestructive
 
+<<<<<<< HEAD
 setenv VIRTUAL_ENV "/home/mark/Stadious-Laundry/virtual"
+=======
+setenv VIRTUAL_ENV "/home/moringa/Desktop/python/assignments/Stadious-Laundry/virtual"
+>>>>>>> 5c445c0636a88de1dcfdbf198060ddc0ca2b8bd7
 
 set _OLD_VIRTUAL_PATH="$PATH"
 setenv PATH "$VIRTUAL_ENV/bin:$PATH"
