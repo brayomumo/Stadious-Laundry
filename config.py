@@ -6,4 +6,4 @@ class TestConfig(Config):
     pass
 class DevConfig(Config):
     DEBUG = True
-config_options ={"production":ProdConfig,"default":DevConfig,"testing":TestConfig}
+config_options ={"production":ProdConfig,"development":DevConfig,"testing":TestConfig}
