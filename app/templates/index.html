@@ -1,118 +1,118 @@
-
-
 {% extends 'base.html' %}
 <!-- {% import "bootstrap/wtf.html" as html%} -->
 
 {% block styles %}
 {{ super () }}
-<link rel="stylesheet" href="{{url_for ('static',filename='index.css')}}" >
+<link rel="stylesheet" href="{{url_for ('static',filename='index.css')}}">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Archivo+Black&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Archivo+Black&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="js/script.js"></script>
-   
-    <link rel="shortcut icon" href="static/photos/basketball-jersey.png">
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="js/script.js"></script>
+
+<link rel="shortcut icon" href="static/photos/basketball-jersey.png">
 {% endblock %}
 
 
 {% block content %}
 
 <div class="slider-parallax-inner"
-style="background: url('/static/photos/cloth.jpg') center center no-repeat; background-size: 100%; height: 700px; background-attachment: fixed;">
-<div class="container ">
-    <div class="row ">
-        <div class="col-lg-6 col-md-8">
-            <div class="emphasis-title">
-                <h1 class="font-body animated fadeIn delay-2s">Stadious-laundry.<br>Picks up your laundry and deliver back to you.</h1>
+    style="background: url('/static/photos/cloth.jpg') center center no-repeat; background-size: 100%; height: 700px; background-attachment: fixed;">
+    <div class="container ">
+        <div class="row ">
+            <div class="col-lg-6 col-md-8">
+                <div class="emphasis-title">
+                    <h1 class="font-body animated fadeIn delay-2s">Stadious-laundry.<br>Picks up your laundry and
+                        deliver back to you.</h1>
+
+                </div>
+                <a href="#" class="btn btn-primary btn-lg disabled" tabindex="-1" role="button"
+                    aria-disabled="true">Sign up now</a>
 
             </div>
-            <a href="#" class="btn btn-primary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">Sign up now</a>
-              
         </div>
     </div>
-</div>
 </div>
 <div class="container work">
-<h2> WHAT WE DO </h2>
-<p>As a laundry service company we offfer the following:</p>
+    <h2> WHAT WE DO </h2>
+    <p>As a laundry service company we offfer the following:</p>
 
-<div class="row ">
-    <div class="col-lg-4">
-        <div class="wash">
-            <img src="/static/icons/tshirt.png">
-            <div class="image-txt">
-                <h3>Wash, Dry &amp; Fold</h3>
-                <p>no hassle service and your items are delivered neatly folded and crisp</p>
+    <div class="row ">
+        <div class="col-lg-4">
+            <div class="wash">
+                <img src="/static/icons/tshirt.png">
+                <div class="image-txt">
+                    <h3>Wash, Dry &amp; Fold</h3>
+                    <p>no hassle service and your items are delivered neatly folded and crisp</p>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="col-lg-4">
-        <div class="image-gallery">
-            <img src="/static/icons/washing-machine (2).png">
-            <div class="dry">
-                <h3>Dry Cleaning</h3>
-                <p>Offered as part of regular laundry or stand-alone service</p>
+        <div class="col-lg-4">
+            <div class="image-gallery">
+                <img src="/static/icons/washing-machine (2).png">
+                <div class="dry">
+                    <h3>Dry Cleaning</h3>
+                    <p>Offered as part of regular laundry or stand-alone service</p>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="col-lg-4">
-        <div class="image-gallery">
-            <img src="/static/icons/iron.png">
-            <div class="image-txt1">
-                <h3> Ironing</h3>
-                <p> no wrinkle way to help you look your best while cruising campus</p>
-            </div>
-        </div>
-    </div>
-</div>
-<br>
-<div class="row ">
-    <div class="col-lg-4">
-        <div class="image-gallery">
-            <img src="/static/icons/brush.png">
-        </div>
-        <div class="wash">
-            <h3>Hand Wash</h3>
-            <p>not all items are machine washable. for your delicates, we handle them with care</p>
-        </div>
-    </div>
-
-
-    <div class="col-lg-4">
-        <div class="image-gallery">
-            <img src="/static/icons/tshirt.png">
-            <div class="image-txt">
-                <h3> Hang Dry</h3>
-                <p> some items shrink when tumble dried. for those, we hang them to dry for you
-                </p>
+        <div class="col-lg-4">
+            <div class="image-gallery">
+                <img src="/static/icons/iron.png">
+                <div class="image-txt1">
+                    <h3> Ironing</h3>
+                    <p> no wrinkle way to help you look your best while cruising campus</p>
+                </div>
             </div>
         </div>
     </div>
     <br>
-
-    <div class="col-lg-4">
-        <div class="image-gallery">
-            <img src="/static/icons/delivery-truck.png">
+    <div class="row ">
+        <div class="col-lg-4">
+            <div class="image-gallery">
+                <img src="/static/icons/brush.png">
+            </div>
+            <div class="wash">
+                <h3>Hand Wash</h3>
+                <p>not all items are machine washable. for your delicates, we handle them with care</p>
+            </div>
         </div>
-        <div class="image-txt1">
-            <h3> Free Pick Up and Delivery</h3>
-            <p> we come to your residence hall or off campus apartment to pick up and deliver your laundry
-            </p>
+
+
+        <div class="col-lg-4">
+            <div class="image-gallery">
+                <img src="/static/icons/tshirt.png">
+                <div class="image-txt">
+                    <h3> Hang Dry</h3>
+                    <p> some items shrink when tumble dried. for those, we hang them to dry for you
+                    </p>
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <div class="col-lg-4">
+            <div class="image-gallery">
+                <img src="/static/icons/delivery-truck.png">
+            </div>
+            <div class="image-txt1">
+                <h3> Free Pick Up and Delivery</h3>
+                <p> we come to your residence hall or off campus apartment to pick up and deliver your laundry
+                </p>
+            </div>
         </div>
     </div>
-</div>
 </div>
 
 <br><br><br><br><br><br>
 <h5> HOW IT WORKS</h5>
 <br>
 <div class="container work">
-        <div id="howitworks">
+    <div id="howitworks">
         <div class="row">
             <div class="col-lg-3">
                 <div class="wash">
@@ -161,219 +161,331 @@ style="background: url('/static/photos/cloth.jpg') center center no-repeat; back
     </div>
 </div>
 
+<br>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> -->
-    <script>
-      console.log('redbull');
-  console.log('bruh');
-  console.log(69);
-  
-  $(document).ready(function() {
-  
-    $(".whatwedo p").hide();
-  
-    $('.whatwedo img.one').click(function() {
-      $(".whatwedo img.one").toggle();
-      $(".whatwedo p.one").toggle();
-    });
-    $('.whatwedo p.one').click(function() {
-      $(".whatwedo img.one").toggle();
-      $(".whatwedo p.one").toggle();
-    });
-    $('.whatwedo img.two').click(function() {
-      $(".whatwedo img.two").toggle();
-      $(".whatwedo p.two").toggle();
-    });
-    $('.whatwedo p.two').click(function() {
-      $(".whatwedo img.two").toggle();
-      $(".whatwedo p.two").toggle();
-    });
-    $('.whatwedo img.three').click(function() {
-      $(".whatwedo img.three").toggle();
-      $(".whatwedo p.three").toggle();
-    });
-    $('.whatwedo p.three').click(function() {
-      $(".whatwedo img.three").toggle();
-      $(".whatwedo p.three").toggle();
-    });
-  
-    $('.whatwedo h3').click(function() {
-      $(".whatwedo img.one").toggle();
-      $(".whatwedo p.one").toggle();
-    });
-    $('.whatwedo h3').click(function() {
-      $(".whatwedo img.one").toggle();
-      $(".whatwedo p.one").toggle();
-    });
-  
-    $("table").hide();
-    $(".additional-buttons").hide();
-    $(".additional-info").hide();
-    $(".btn.yes").hide();
-    $(".btn.no").hide();
-    $(".additional-info h4").hide();
-  
-    $('.btn.order').click(function() {
-      var sizeOfPizza = $(".size option:selected").val();
-      var toppingsOfPizza = $(".toppings option:selected").val();
-      var crustOfPizza = $(".crust option:selected").val();
-      var total = parseInt(sizeOfPizza) + parseInt(toppingsOfPizza) + parseInt(crustOfPizza);
-      var order = 1;
-      var grandTotal = 0;
-  
-      $("table").show();
-      $(".additional-buttons").show();
-      $(".btn.order").hide();
-  
-      $("#size").html($(".size option:selected").text() + " - " + sizeOfPizza);
-      $("#toppings").html($(".toppings option:selected").text() + " - " + toppingsOfPizza);
-      $("#crust").html($(".crust option:selected").text() + " - " + crustOfPizza);
-      $("#total").html(total);
-  
-      function Pizza(size, toppings, crust, total, orderNo) {
-        this.size = size;
-        this.toppings = toppings;
-        this.crust = crust;
-        this.total = total;
-        this.orderNo = orderNo;
-      }
-  
-  
-      $('.btn.add-pizza').click(function() {
-        var sizeOfPizza = $(".size option:selected").val();
-        var toppingsOfPizza = $(".toppings option:selected").val();
-        var crustOfPizza = $(".crust option:selected").val();
-        var total = parseInt(sizeOfPizza) + parseInt(toppingsOfPizza) + parseInt(crustOfPizza);
-        order = order + 1;
-        grandTotal = grandTotal + total;
-  
-  
-        var newPizza = new Pizza(sizeOfPizza, toppingsOfPizza, crustOfPizza, total, order);
-  
-        var newRow = '<tr><th scope="row">' + newPizza.orderNo + '</th><td id="size">' + $(".size option:selected").text() + " - " + newPizza.size + '</td><td id="toppings">' + $(".toppings option:selected").text() + " - " + newPizza.toppings + '</td><td id="crust">' + $(".crust option:selected").text() + " - " + newPizza.crust + '</td><td id="total">' + newPizza.total + '</td></tr>'
-  
-        $("#pizza").append(newRow);
-      });
-  
-      $(".btn.check-out").click(function() {
-        $(".btn.add-pizza").hide();
-        $(".btn.check-out").hide();
-        $(".additional-info").show();
-        $(".btn.yes").show();
-        $(".btn.no").show();
-        $(".additional-info .location").hide();
-        grandTotal = grandTotal + total;
-  
-        $(".additional-info h3 span").html(grandTotal);
-      });
-  
-      $(".btn.yes").click(function() {
-        $(".additional-info h5").hide();
-        $(".btn.yes").hide();
-        $(".btn.no").hide();
-        $(".additional-info .location").show();
-        $(".additional-info h3 span").html(grandTotal + 200);
-      });
-  
-      $(".btn.no").click(function() {
-        $(".additional-info h5").hide();
-        $(".btn.yes").hide();
-        $(".btn.no").hide();
-        $(".additional-info .location").show();
-      });
-  
-      $(".btn.complete").click(function() {
-        var location = $(".additional-info .location input").val();
-        $(".additional-info h4").show();
-        $(".additional-info .location").hide();
-        $(".additional-info h4 span").html(location);
-      });
-  
-    });
-  
-  });
-  
-    </script>
-    
-    <style>
-  .jumbotron {
-      color: rgba(0, 0, 0, 0.5);
-  }    
-  
-  .container-fluid {
-    margin: 0 auto;
-    width: 960px;
-  }
-  
-  .whatwedo img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-  }
-  
-  h1, h3 {
-    text-align: center;
-  }
-  
-  .pacifico {
-    font-family: 'Pacifico', cursive;
-  }
-  
-  .col-md-4.col-sm-12 {
-    text-align: center;
-  }
-  
-  @media only screen and (max-width: 600px) {
-    .container-fluid {
-      width: 100%;
-    }
-  
-    .display-1 {
-      font-size: 2.5rem;
-    }
-  }
-  
-  @media only screen and (min-width: 600px) {
-    .container-fluid {
-      width: 95%;
-    }
-  }
-  
-  @media only screen and (min-width: 768px) {
-    .container-fluid {
-      width: 90%;
-    }
-  }
-  
-  @media only screen and (min-width: 992px) {
-    .container-fluid {
-      width: 70%;
-    }
-  }
-  
-  body {
-    font-family: 'Oswald', sans-serif;
-    color:#000;
-  }
-  
-  
-    </style>
-</body>
-</html>
-    <br>
-
-    <div class="col-lg-4">
-        <div class="image-gallery">
-            <img src="/static/icons/delivery-truck.png">
-        </div>
-        <div class="image-txt1">
-            <h3> Free Pick Up and Delivery</h3>
-            <p> we come to your residence hall or off campus apartment to pick up and deliver your laundry
-            </p>
-        </div>
+<div class="col-lg-4">
+    <div class="image-gallery">
+        <img src="/static/icons/delivery-truck.png">
+    </div>
+    <div class="image-txt1">
+        <h3> Free Pick Up and Delivery</h3>
+        <p> we come to your residence hall or off campus apartment to pick up and deliver your laundry
+        </p>
     </div>
 </div>
+
+
+<!-- <--Mannu-->
+<div id="services" class="col-md-12">
+    <h1>Emmanuel</h1>
+    <div class="container-fluid">
+        <div class="">
+
+            <div class="whatwedo">
+
+                <br>
+                <br>
+                <br>
+                <div class="row">
+                    <div class="col-md-4 col-sm-12">
+
+
+                        <br>
+                        <br>
+                        <h3 class="one">Top</h3>
+                        <br>
+
+                        <select class="form-control size">
+                            <option label="Victoria's secret" value="500">Victoria's secret</option>
+                            <option label="Louis Vuitton" value="700">Louis Vuitton</option>
+                            <option label="Channel" value="1000">Channel</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4 col-sm-12">
+
+                        <br>
+                        <br>
+                        <h3 class="two">Bottom</h3>
+                        <br>
+                        <p class='two'> We know pizza is awesome but our high quality toppings will definetely take your
+                            pizza to the next level.</p>
+
+
+                        <select class="form-control toppings">
+                            <option label="Sir Henry's" value="100">Sir Henry's</option>
+                            <option label="Gucci" value="50">Gucci</option>
+                            <option label="Addidas" value="80">Addidas</option>
+                        </select>
+
+                    </div>
+                    <div class="col-md-4 col-sm-12">
+                        <br>
+                        <br>
+                        <h3 class="three">Socks</h3>
+                        <br>
+                        <p class='three'>Your crust your choice we are here to facilitate your pizza experience to the
+                            next level. Try a different kind of crust today.</p>
+
+                        <select class="form-control crust">
+                            <option label="Happy Socks" value="500">Happy Socks</option>
+                            <option label="Cotton socks" value="200">Cotton socks</option>
+                            <option label="Silicon socks" value="300">Silicon socks</option>
+                        </select>
+
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <div class="text-center">
+                <button class="btn btn-info order" type="submit">Order</button>
+            </div>
+            <br>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Order No.</th>
+                        <th scope="col">Top Size</th>
+                        <th scope="col">Bottom</th>
+                        <th scope="col">Socks</th>
+                        <th scope="col">Total</th>
+                    </tr>
+                </thead>
+                <tbody id="pizza">
+                    <tr>
+                        <th scope="row">1</th>
+                        <td id="size"></td>
+                        <td id="toppings"></td>
+                        <td id="crust"></td>
+                        <td id="total"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="additional-buttons">
+                <div class="text-center">
+                    <button class="btn btn-info add-pizza" type="submit">Add Another</button>
+                    <div class="additional-info">
+                        <h3>The total is: <span></span></h3>
+                        <h5>Would you like delivery for an additional <em>200</em>?</h5>
+                        <h4>Your order has been received! We are dispatching our rider to <span></span></h4>
+                        <div class="location text-center">
+                            <input type="text" size="30" placeholder="Where do you live?" required />
+                            <button class="btn btn-info complete" type="submit">Complete</button>
+                        </div>
+                    </div>
+                    <br>
+                    <button class="btn btn-info yes" type="submit">Yes</button>
+                    <button class="btn btn-info no" type="submit">No</button>
+                </div>
+                <div class="text-right">
+                    <button class="btn btn-info check-out" type="submit">Checkout</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> -->
+    <script>
+        console.log('redbull');
+        console.log('bruh');
+        console.log(69);
+
+        $(document).ready(function () {
+
+            $(".whatwedo p").hide();
+
+            $('.whatwedo img.one').click(function () {
+                $(".whatwedo img.one").toggle();
+                $(".whatwedo p.one").toggle();
+            });
+            $('.whatwedo p.one').click(function () {
+                $(".whatwedo img.one").toggle();
+                $(".whatwedo p.one").toggle();
+            });
+            $('.whatwedo img.two').click(function () {
+                $(".whatwedo img.two").toggle();
+                $(".whatwedo p.two").toggle();
+            });
+            $('.whatwedo p.two').click(function () {
+                $(".whatwedo img.two").toggle();
+                $(".whatwedo p.two").toggle();
+            });
+            $('.whatwedo img.three').click(function () {
+                $(".whatwedo img.three").toggle();
+                $(".whatwedo p.three").toggle();
+            });
+            $('.whatwedo p.three').click(function () {
+                $(".whatwedo img.three").toggle();
+                $(".whatwedo p.three").toggle();
+            });
+
+            $('.whatwedo h3').click(function () {
+                $(".whatwedo img.one").toggle();
+                $(".whatwedo p.one").toggle();
+            });
+            $('.whatwedo h3').click(function () {
+                $(".whatwedo img.one").toggle();
+                $(".whatwedo p.one").toggle();
+            });
+
+            $("table").hide();
+            $(".additional-buttons").hide();
+            $(".additional-info").hide();
+            $(".btn.yes").hide();
+            $(".btn.no").hide();
+            $(".additional-info h4").hide();
+
+            $('.btn.order').click(function () {
+                var sizeOfPizza = $(".size option:selected").val();
+                var toppingsOfPizza = $(".toppings option:selected").val();
+                var crustOfPizza = $(".crust option:selected").val();
+                var total = parseInt(sizeOfPizza) + parseInt(toppingsOfPizza) + parseInt(crustOfPizza);
+                var order = 1;
+                var grandTotal = 0;
+
+                $("table").show();
+                $(".additional-buttons").show();
+                $(".btn.order").hide();
+
+                $("#size").html($(".size option:selected").text() + " - " + sizeOfPizza);
+                $("#toppings").html($(".toppings option:selected").text() + " - " + toppingsOfPizza);
+                $("#crust").html($(".crust option:selected").text() + " - " + crustOfPizza);
+                $("#total").html(total);
+
+                function Pizza(size, toppings, crust, total, orderNo) {
+                    this.size = size;
+                    this.toppings = toppings;
+                    this.crust = crust;
+                    this.total = total;
+                    this.orderNo = orderNo;
+                }
+
+
+                $('.btn.add-pizza').click(function () {
+                    var sizeOfPizza = $(".size option:selected").val();
+                    var toppingsOfPizza = $(".toppings option:selected").val();
+                    var crustOfPizza = $(".crust option:selected").val();
+                    var total = parseInt(sizeOfPizza) + parseInt(toppingsOfPizza) + parseInt(crustOfPizza);
+                    order = order + 1;
+                    grandTotal = grandTotal + total;
+
+
+                    var newPizza = new Pizza(sizeOfPizza, toppingsOfPizza, crustOfPizza, total, order);
+
+                    var newRow = '<tr><th scope="row">' + newPizza.orderNo + '</th><td id="size">' + $(".size option:selected").text() + " - " + newPizza.size + '</td><td id="toppings">' + $(".toppings option:selected").text() + " - " + newPizza.toppings + '</td><td id="crust">' + $(".crust option:selected").text() + " - " + newPizza.crust + '</td><td id="total">' + newPizza.total + '</td></tr>'
+
+                    $("#pizza").append(newRow);
+                });
+
+                $(".btn.check-out").click(function () {
+                    $(".btn.add-pizza").hide();
+                    $(".btn.check-out").hide();
+                    $(".additional-info").show();
+                    $(".btn.yes").show();
+                    $(".btn.no").show();
+                    $(".additional-info .location").hide();
+                    grandTotal = grandTotal + total;
+
+                    $(".additional-info h3 span").html(grandTotal);
+                });
+
+                $(".btn.yes").click(function () {
+                    $(".additional-info h5").hide();
+                    $(".btn.yes").hide();
+                    $(".btn.no").hide();
+                    $(".additional-info .location").show();
+                    $(".additional-info h3 span").html(grandTotal + 200);
+                });
+
+                $(".btn.no").click(function () {
+                    $(".additional-info h5").hide();
+                    $(".btn.yes").hide();
+                    $(".btn.no").hide();
+                    $(".additional-info .location").show();
+                });
+
+                $(".btn.complete").click(function () {
+                    var location = $(".additional-info .location input").val();
+                    $(".additional-info h4").show();
+                    $(".additional-info .location").hide();
+                    $(".additional-info h4 span").html(location);
+                });
+
+            });
+
+        });
+
+    </script>
+
+    <style>
+        .jumbotron {
+            color: rgba(0, 0, 0, 0.5);
+        }
+
+        .container-fluid {
+            margin: 0 auto;
+            width: 960px;
+        }
+
+        .whatwedo img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+        }
+
+        h1,
+        h3 {
+            text-align: center;
+        }
+
+        .pacifico {
+            font-family: 'Pacifico', cursive;
+        }
+
+        .col-md-4.col-sm-12 {
+            text-align: center;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .container-fluid {
+                width: 100%;
+            }
+
+            .display-1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media only screen and (min-width: 600px) {
+            .container-fluid {
+                width: 95%;
+            }
+        }
+
+        @media only screen and (min-width: 768px) {
+            .container-fluid {
+                width: 90%;
+            }
+        }
+
+        @media only screen and (min-width: 992px) {
+            .container-fluid {
+                width: 70%;
+            }
+        }
+
+        body {
+            font-family: 'Oswald', sans-serif;
+            color: #000;
+        }
+    </style>
+
 </div>
 
 
