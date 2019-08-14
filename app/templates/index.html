@@ -1,1 +1,112 @@
 
+{% extends 'base.html' %}
+<!-- {% import "bootstrap/wtf.html" as html%} -->
+
+{% block styles %}
+{{ super () }}
+<link rel="stylesheet" href="{{url_for ('static',filename='index.css')}}" >
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Black&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="js/script.js"></script>
+   
+    <link rel="shortcut icon" href="static/photos/basketball-jersey.png">
+{% endblock %}
+
+
+{% block content %}
+
+<div class="slider-parallax-inner"
+style="background: url('/static/photos/cloth.jpg') center center no-repeat; background-size: 100%; height: 700px; background-attachment: fixed;">
+<div class="container ">
+    <div class="row ">
+        <div class="col-lg-6 col-md-8">
+            <div class="emphasis-title">
+                <h1 class="font-body animated fadeIn delay-2s">Stadious-laundry.<br>Picks up your laundry and deliver back to you.</h1>
+
+            </div>
+            <a href="#" class="btn btn-primary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">Sign up now</a>
+              
+        </div>
+    </div>
+</div>
+</div>
+<div class="container work">
+<h2> WHAT WE DO </h2>
+<p>As a laundry service company we offfer the following:</p>
+
+<div class="row ">
+    <div class="col-lg-4">
+        <div class="wash">
+            <img src="/static/icons/tshirt.png">
+            <div class="image-txt">
+                <h3>Wash, Dry &amp; Fold</h3>
+                <p>no hassle service and your items are delivered neatly folded and crisp</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="image-gallery">
+            <img src="/static/icons/washing-machine (2).png">
+            <div class="dry">
+                <h3>Dry Cleaning</h3>
+                <p>Offered as part of regular laundry or stand-alone service</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="image-gallery">
+            <img src="/static/icons/iron.png">
+            <div class="image-txt1">
+                <h3> Ironing</h3>
+                <p> no wrinkle way to help you look your best while cruising campus</p>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<div class="row ">
+    <div class="col-lg-4">
+        <div class="image-gallery">
+            <img src="/static/icons/brush.png">
+        </div>
+        <div class="wash">
+            <h3>Hand Wash</h3>
+            <p>not all items are machine washable. for your delicates, we handle them with care</p>
+        </div>
+    </div>
+
+
+    <div class="col-lg-4">
+        <div class="image-gallery">
+            <img src="/static/icons/tshirt.png">
+            <div class="image-txt">
+                <h3> Hang Dry</h3>
+                <p> some items shrink when tumble dried. for those, we hang them to dry for you
+                </p>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div class="col-lg-4">
+        <div class="image-gallery">
+            <img src="/static/icons/delivery-truck.png">
+        </div>
+        <div class="image-txt1">
+            <h3> Free Pick Up and Delivery</h3>
+            <p> we come to your residence hall or off campus apartment to pick up and deliver your laundry
+            </p>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+{% endblock%}
