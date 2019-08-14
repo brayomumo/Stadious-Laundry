@@ -24,7 +24,7 @@ class User(db.Model, UserMixin):
     last_name = db.Column(db.String(255))
     email = db.Column(db.String(255), unique=True)
     username = db.Column(db.String(255), index = True)
-    password = db.Column(db.String(255))
+    password_hash = db.Column(db.String(255))
     active = db.Column(db.Boolean())
     # item = db.relationship('Item', backref='user', lazy='dynamic')
     confirmed_at = db.Column(db.DateTime())
