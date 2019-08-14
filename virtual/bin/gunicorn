@@ -1,6 +1,4 @@
-#!/bin/sh
-'''exec' "/home/mannuh/Documents/Group project/Stadious-Laundry/virtual/bin/python" "$0" "$@"
-' '''
+#!/home/moringa/Desktop/python/assignments/Stadious-Laundry/virtual/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
