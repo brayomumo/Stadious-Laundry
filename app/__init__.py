@@ -28,7 +28,7 @@ def create_app(config_name):
     mail.init_app(app)
 
 
-    #config uploadset
+    # #config uploadset
     # configure_uploads(app, photos)
 
     #Registering bluprints
