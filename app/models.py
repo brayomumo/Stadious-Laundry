@@ -30,24 +30,35 @@ class Role(db.Model, RoleMixin):
     
         def __str__(self):
             return self.email
-        
+
 class User(db.Model, UserMixin):
+
     id = db.Column(db.Integer, primary_key=True)
     first_name = db.Column(db.String(255))
     last_name = db.Column(db.String(255))
     email = db.Column(db.String(255), unique=True)
     password = db.Column(db.String(255))
     active = db.Column(db.Boolean())
+    item = db.relationship('Item', backref='user', lazy='dynamic')
     confirmed_at = db.Column(db.DateTime())
     roles = db.relationship('Role', secondary=roles_users,backref=db.backref('users', lazy='dynamic'))
      def __str__(self):
         return self.email
     
-    class Laundry (db.Model):
-        __tablename__ = 'laundries'
+    class Item (db.Model):
+
+        __tablename__ = "items"
 
         id = db.Column(db.Integer, primary_key=True)
-        top = db.Column(db.String(255))
-        bottom = db.Column(db.String(255))
-        socks = db.Column(db.String(255))
+        owner_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
+        itemName = db.Column(db.String())
+        itemPrice= db.Column(db.Integer())
 
+        @classmethod
+
+    def get_items(cls, id)
+        items = Item.query.order_by(item_id=id).desc().all()
+        return items
+
+    def __repr__(self):
+        return f'Item {self.itemName, itemPrice}'
