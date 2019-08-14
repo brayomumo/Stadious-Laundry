@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 #!/bin/sh
 '''exec' "/home/mannuh/Documents/Group project/Stadious-Laundry/virtual/bin/python" "$0" "$@"
 ' '''
+=======
+#!/home/mark/Stadious-Laundry/virtual/bin/python
+>>>>>>> 46337212cf55e7be709f95ebbcee78780c204023
 # -*- coding: utf-8 -*-
 import re
 import sys

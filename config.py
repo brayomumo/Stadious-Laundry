@@ -1,5 +1,6 @@
 import os
 
+<<<<<<< HEAD
 
 class Config:
     SECRET_KEY = os.environ.get('SECRET_KEY')
@@ -12,10 +13,20 @@ class Config:
     MAIL_PASSWORD = os.environ.get("MAIL_PASSWORD")
     SIMPLEMDE_JS_IIFE = True
     SIMPLEMDE_USE_CDN = True
+=======
+class Config:
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://smoucha:mumo@localhost/laundry'
+    SECRET_KEY = os.environ.get('SECRET_KEY')
+    MAIL_SERVER = 'smtp.googlemail.com'
+    MAIL_PORT = 587
+    MAIL_USE_TLS= True
+
+>>>>>>> 46337212cf55e7be709f95ebbcee78780c204023
     @staticmethod
     def init_app(app):
         pass
 
+<<<<<<< HEAD
 
 class ProdConfig(Config):
     # SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://mannuh:123@localhost/maranara'
@@ -41,3 +52,20 @@ config_options = {
     'production': ProdConfig,
     'test': TestConfig
 }
+=======
+class ProdConfig(Config):
+    
+    pass
+
+class  DevConfig(Config):
+    
+
+    DEBUG = True
+
+config_options = {
+    'development': DevConfig,
+    'production':ProdConfig
+}
+
+
+>>>>>>> 46337212cf55e7be709f95ebbcee78780c204023
