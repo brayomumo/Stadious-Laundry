@@ -1,4 +1,4 @@
-#!/home/moringa/Desktop/python/assignments/Stadious-Laundry/virtual/bin/python
+#!/home/moringa/Desktop/temp/python/Stadious-Laundry/virtual/bin/python
 
 import sys
 from os.path import join, dirname, exists
