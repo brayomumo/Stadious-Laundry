@@ -1,4 +1,4 @@
-#!/home/smoucha/Desktop/ips/flask/laundry/virtual/bin/python
+#!/home/mark/Stadious-Laundry/virtual/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
