@@ -1,1 +1,1 @@
-python3.6 manage.py serveropposite of kinky
+python3.6 manage.py server
