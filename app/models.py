@@ -5,6 +5,7 @@ from werkzeug.security import generate_password_hash,check_password_hash
 
 
 # Define models
+
 roles_users = db.Table(
     'roles_users',
     db.Column('user_id', db.Integer(), db.ForeignKey('user.id')),
@@ -19,6 +20,7 @@ class Role(db.Model, RoleMixin):
         return self.name
 
     class User(db.Model, UserMixin):
+
         id = db.Column(db.Integer, primary_key=True)
         first_name = db.Column(db.String(255))
         last_name = db.Column(db.String(255))
@@ -31,4 +33,11 @@ class Role(db.Model, RoleMixin):
         def __str__(self):
             return self.email
     
-    
+    class Laundry (db.Model):
+        __tablename__ = 'laundries'
+
+        id = db.Column(db.Integer, primary_key=True)
+        top = db.Column(db.String(255))
+        bottom = db.Column(db.String(255))
+        socks = db.Column(db.String(255))
+
