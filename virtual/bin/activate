@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/home/moringa/Desktop/temp/python/Stadious-Laundry/virtual"
+VIRTUAL_ENV="/home/mark/Stadious-Laundry/virtual"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
