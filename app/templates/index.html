@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% import "bootstrap/wtf.htm" as html%}
+
+{% block styles %}
+{{ super () }}
+<link rel="stylesheet" href="{{url_for ('static',filename='css/index.css')}}" >
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="slider-parallax-inner" style="background: url('app/static/photos/cloth.jpg') center center no-repeat; background-size: cover;">
+    <div class="container dark clearfix">
+        <div class="row clearfix">
+            <div class="col-lg-6 col-md-8">
+                <div class="emphasis-title">
+                    <h1 class="font-body">Stadious-laundry.<br>Picks up your laundry and deliver back to you.</h1>
+
+                </div>
+                <a href="#" class="button button-large button-white button-light capitalize" style="border-radius: 23px;">Sign Up Now</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container dark clearfix">
+    <h2> What we do </h2>
+    <div class="row">
+        <div class="column-lg-3">
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="column-lg-3">
+
+
+        </div>
+</div>
+
+
+{% endblock%}
