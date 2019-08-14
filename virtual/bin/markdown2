@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 #!/home/mannuh/Documents/Group project/Stadious-Laundry/virtual/bin/python
-=======
-#!/home/mark/Stadious-Laundry/virtual/bin/python
->>>>>>> 46337212cf55e7be709f95ebbcee78780c204023
 
 import sys
 from os.path import join, dirname, exists
