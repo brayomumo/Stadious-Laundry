@@ -1,5 +1,5 @@
 from flask_security import UserMixin, RoleMixin
-
+from werkzeug.security import generate_password_hash, check_password_hash
 from . import db
 
 # Define models
@@ -29,8 +29,26 @@ class User(db.Model, UserMixin):
     # item = db.relationship('Item', backref='user', lazy='dynamic')
     confirmed_at = db.Column(db.DateTime())
     roles = db.relationship('Role', secondary=roles_users,backref=db.backref('users', lazy='dynamic'))
-    def __str__(self):
-        return self.email
+    @property
+    def password(self):
+        raise AttributeError('You cannot read the password attribute')
+
+    @password.setter
+    def password(self, password):
+        self.password_hash = generate_password_hash(password)
+
+    def verify_password(self, password):
+        return check_password_hash(self.password_hash, password)
+
+    def __repr__(self):
+        return f'User {self.username}'
+    
+    
+    
+    # def __str__(self):
+    #     return self.email
+    
+    
     
 # # Create customized model view class
 # class MyModelView(sqla.ModelView):
