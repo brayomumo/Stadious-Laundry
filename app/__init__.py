@@ -28,8 +28,8 @@ def create_app(config_name):
     mail.init_app(app)
 
 
-    #config uploadset
-    configure_uploads(app, photos)
+    # #config uploadset
+    # configure_uploads(app, photos)
 
     #Registering bluprints
     from .main import main as main_blueprint
