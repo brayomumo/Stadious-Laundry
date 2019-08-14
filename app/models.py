@@ -42,7 +42,7 @@ class User(db.Model, UserMixin):
     item = db.relationship('Item', backref='user', lazy='dynamic')
     confirmed_at = db.Column(db.DateTime())
     roles = db.relationship('Role', secondary=roles_users,backref=db.backref('users', lazy='dynamic'))
-     def __str__(self):
+    def __str__(self):
         return self.email
     
     class Item (db.Model):
