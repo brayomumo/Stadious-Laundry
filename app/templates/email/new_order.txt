@@ -1,0 +1,4 @@
+Dear {{user.username}}
+We have received your order and the total cost is Ksh {{}}.
+
+Thank You.

@@ -11,3 +11,5 @@ from flask_login import login_required
 def index():
     title = "Home"
     return render_template('index.html', title=title)
+
+
