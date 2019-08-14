@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/home/smoucha/Desktop/ips/flask/laundry/virtual"
+VIRTUAL_ENV="/home/mannuh/Documents/Group project/Stadious-Laundry/virtual"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
