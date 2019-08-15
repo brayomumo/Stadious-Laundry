@@ -200,6 +200,12 @@
                             <option label="Louis Vuitton" value="700">Louis Vuitton</option>
                             <option label="Channel" value="1000">Channel</option>
                         </select>
+                        <input name="qty" id="qty" type="text" />
+                        <label>Total:</label>
+                        <input name="total" id="total" type="text" />
+                        <input name="price" id="price" type="hidden" value="30" /><br />
+                        
+
                     </div>
                     <div class="col-md-4 col-sm-12">
 
@@ -332,6 +338,13 @@
             $('.whatwedo h3').click(function () {
                 $(".whatwedo img.one").toggle();
                 $(".whatwedo p.one").toggle();
+            });
+            $(document).ready(function () {
+                var qty = $("#qty");
+                qty.keyup(function () {
+                    var total = isNaN(parseInt(qty.val() * $("#price").val())) ? 0 : (qty.val() * $("#price").val())
+                    $("#total").val(total);
+                });
             });
 
             $("table").hide();
@@ -487,6 +500,26 @@
     </style>
 
 </div>
+
+<!-- <div class="container row col-md-12">
+    <label>Qty:</label>
+    <input name="qty" id="qty" type="text" />
+    <input name="price" id="price" type="hidden" value="30" /><br />
+
+    <label>Total:</label>
+    <input name="total" id="total" type="text" />
+    <script>
+        $(document).ready(function () {
+            var qty = $("#qty");
+            qty.keyup(function () {
+                var total = isNaN(parseInt(qty.val() * $("#price").val())) ? 0 : (qty.val() * $("#price").val())
+                $("#total").val(total);
+            });
+        });
+    </script>
+
+
+</div> -->
 
 
 
