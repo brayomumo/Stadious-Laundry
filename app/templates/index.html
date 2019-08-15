@@ -164,7 +164,6 @@
 <br>
 
 
-<!-- Mannu -->
 <h1>Place your freaking order</h1>
 <hr>
 <div style="margin-left: 20px;" class="row">
@@ -241,43 +240,6 @@
 
 <script>
     
-    $(document).ready(function () {
-
-        $(".whatwedo p").hide();
-
-        $('.whatwedo img.one').click(function () {
-            $(".whatwedo img.one").toggle();
-            $(".whatwedo p.one").toggle();
-        });
-        $('.whatwedo p.one').click(function () {
-            $(".whatwedo img.one").toggle();
-            $(".whatwedo p.one").toggle();
-        });
-        $('.whatwedo img.two').click(function () {
-            $(".whatwedo img.two").toggle();
-            $(".whatwedo p.two").toggle();
-        });
-        $('.whatwedo p.two').click(function () {
-            $(".whatwedo img.two").toggle();
-            $(".whatwedo p.two").toggle();
-        });
-        $('.whatwedo img.three').click(function () {
-            $(".whatwedo img.three").toggle();
-            $(".whatwedo p.three").toggle();
-        });
-        $('.whatwedo p.three').click(function () {
-            $(".whatwedo img.three").toggle();
-            $(".whatwedo p.three").toggle();
-        });
-
-        $('.whatwedo h3').click(function () {
-            $(".whatwedo img.one").toggle();
-            $(".whatwedo p.one").toggle();
-        });
-        $('.whatwedo h3').click(function () {
-            $(".whatwedo img.one").toggle();
-            $(".whatwedo p.one").toggle();
-        });
         $(document).ready(function () {
             var qty = $("#qty");
             qty.keyup(function () {
@@ -371,7 +333,6 @@
 
         });
 
-    });
 
 </script>
 
@@ -440,28 +401,4 @@
 
 </div>
 
-<<<<<<< HEAD
-=======
-<!-- <div class="container row col-md-12">
-    <label>Qty:</label>
-    <input name="qty" id="qty" type="text" />
-    <input name="price" id="price" type="hidden" value="30" /><br />
-
-    <label>Total:</label>
-    <input name="total" id="total" type="text" />
-    <script>
-        $(document).ready(function () {
-            var qty = $("#qty");
-            qty.keyup(function () {
-                var total = isNaN(parseInt(qty.val() * $("#price").val())) ? 0 : (qty.val() * $("#price").val())
-                $("#total").val(total);
-            });
-        });
-    </script>
-
-
-</div> -->
-
-
->>>>>>> 634186d7c2cfd0e0e1d187a0d6dee8f16c86e76f
 {% endblock%}
