@@ -1,8 +1,8 @@
-"""alterered column password to password_hash
+"""how
 
-Revision ID: 1f12634e47fe
-Revises: 09ec1ed25c6e
-Create Date: 2019-08-15 00:58:26.356177
+Revision ID: 86650923a5cc
+Revises: 
+Create Date: 2019-08-15 16:31:45.456640
 
 """
 from alembic import op
@@ -10,8 +10,8 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = '1f12634e47fe'
-down_revision = '09ec1ed25c6e'
+revision = '86650923a5cc'
+down_revision = None
 branch_labels = None
 depends_on = None
 
