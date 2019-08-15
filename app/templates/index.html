@@ -233,8 +233,9 @@
 
 <hr>
 <h3 style="margin-left: 20px;">Grand Total</h3>
+<input name="grandTotal" id="grandTotal" type="number" />
 <hr>
-<button style="float: right;" class="btn btn-primary">Submit</button>&nbsp;
+<button style="float: right;" id="btn-sum" class="btn btn-primary">Submit</button>&nbsp;
 
 
 
@@ -265,6 +266,13 @@
         var qty2 = $("#qty2");
         qty2.keyup(function () {
             var total2 = isNaN(parseInt(qty2.val() * $("#price2").val())) ? 0 : (qty2.val() * $("#price2").val())
+            $("#total2").val(total2);
+        });
+    });
+    $(document).ready(function () {
+        var grandTotal = $("#grandTotal");
+        ("#btn-sum").onClick(function () {
+            var grandTotal = isNaN(parseInt($("#total").val() + $("#total1").val())+ $("#total2").val())
             $("#total2").val(total2);
         });
     });
