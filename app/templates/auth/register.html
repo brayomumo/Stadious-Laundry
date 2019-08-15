@@ -1,27 +1,18 @@
-{% extends 'base.html' %}
-{% import 'bootstrap/wtf.html' as wtf %}
-
-{% block styles%}
-{{ super() }}
-{% endblock%}
+{% extends 'base.html'%}
+{% import 'bootstrap/wtf.html' as wtf%}
 
 {% block content %}
+<div class="row col-md-12 mt-5" style="height: 100vh;">
+    <div class="card" style="min-height: 500px; margin-left: 300px; box-shadow: 0px 8px 60px -10px rgba(13, 28, 39, 0.6); background: #fff;
+    max-width: 700px; position: relative;">
+        <div class="card-heading text-center mt-5">
+            <h2 style="color: rgb(26, 26, 39); padding-top: 30px;"><strong>Lets get you set up.</strong></h2>
+            
 
-<div class="container">
-  <div class="row">
+               <div style="width: 600px; margin-left: 50px; padding-top: 30px;">{{wtf.quick_form(registration_form)}}</div>
 
-    <div class="col-md-2">
+        </div>
     </div>
-
-    <div class="col-md-8">
-      {{wtf.quick_form(registration_form)}}
-    </div>
-
-    <div class="col-md-2">
-    </div>
-
-  </div>
-
 </div>
 
-{% endblock %}
+{% endblock%}
