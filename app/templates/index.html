@@ -30,8 +30,7 @@
                         deliver back to you.</h1>
 
                 </div>
-                <a href="#" class="btn btn-primary btn-lg disabled" tabindex="-1" role="button"
-                    aria-disabled="true">Sign up now</a>
+                <a href="{{ url_for('auth.register') }}" class="btn btn-primary btn-sm">Lets get you started!</a>
 
             </div>
         </div>
@@ -108,7 +107,7 @@
     </div>
 </div>
 
-<br><br><br><br><br><br>
+<hr><hr>
 <h5> HOW IT WORKS</h5>
 <br>
 <div class="container work">
@@ -164,7 +163,6 @@
 <br>
 
 
-<!-- <--Mannu-->
 <h1>Place your freaking order</h1>
 <hr>
 <div style="margin-left: 20px;" class="row">
@@ -185,7 +183,7 @@
     </div>
 
     <div class="col-md-3">
-        <input name="total" id="total" type="number" />
+        <input name="total" id="total" type="number" readonly/>
     </div>
 </div>
 <div style="margin-left: 20px;" class="row">
@@ -206,7 +204,7 @@
     </div>
 
     <div class="col-md-3">
-        <input name="total1" id="total1" type="number" />
+        <input name="total1" id="total1" type="number" readonly/>
     </div>
 </div>
 <div style="margin-left: 20px;" class="row">
@@ -227,7 +225,7 @@
     </div>
 
     <div class="col-md-3">
-        <input name="total2" id="total2" type="number" />
+        <input name="total2" id="total2" type="number" readonly/>
     </div>
 </div>
 
@@ -236,16 +234,10 @@
 <hr>
 <button style="float: right;" class="btn btn-primary">Submit</button>&nbsp;
 
-
-
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
 <script>
-    console.log('redbull');
-    console.log('bruh');
-    console.log(69);
-
     $(document).ready(function () {
         var qty = $("#qty");
         qty.keyup(function () {
@@ -270,91 +262,5 @@
     });
 
 </script>
-
-<style>
-    .jumbotron {
-        color: rgba(0, 0, 0, 0.5);
-    }
-
-    .container-fluid {
-        margin: 0 auto;
-        width: 960px;
-    }
-
-    .whatwedo img {
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
-    }
-
-    h1,
-    h3 {
-        text-align: center;
-    }
-
-    .pacifico {
-        font-family: 'Pacifico', cursive;
-    }
-
-    .col-md-4.col-sm-12 {
-        text-align: center;
-    }
-
-    @media only screen and (max-width: 600px) {
-        .container-fluid {
-            width: 100%;
-        }
-
-        .display-1 {
-            font-size: 2.5rem;
-        }
-    }
-
-    @media only screen and (min-width: 600px) {
-        .container-fluid {
-            width: 95%;
-        }
-    }
-
-    @media only screen and (min-width: 768px) {
-        .container-fluid {
-            width: 90%;
-        }
-    }
-
-    @media only screen and (min-width: 992px) {
-        .container-fluid {
-            width: 70%;
-        }
-    }
-
-    body {
-        font-family: 'Oswald', sans-serif;
-        color: #000;
-    }
-</style>
-
-</div>
-
-<!-- <div class="container row col-md-12">
-    <label>Qty:</label>
-    <input name="qty" id="qty" type="text" />
-    <input name="price" id="price" type="hidden" value="30" /><br />
-
-    <label>Total:</label>
-    <input name="total" id="total" type="text" />
-    <script>
-        $(document).ready(function () {
-            var qty = $("#qty");
-            qty.keyup(function () {
-                var total = isNaN(parseInt(qty.val() * $("#price").val())) ? 0 : (qty.val() * $("#price").val())
-                $("#total").val(total);
-            });
-        });
-    </script>
-
-
-</div> -->
-
 
 {% endblock%}
