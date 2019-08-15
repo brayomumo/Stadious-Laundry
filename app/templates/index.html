@@ -26,8 +26,8 @@
         <div class="row ">
             <div class="col-lg-6 col-md-8">
                 <div class="emphasis-title">
-                    <h1 class="font-body animated fadeIn delay-2s">Stadious-laundry.<br>Picks up your laundry and
-                        deliver back to you.</h1>
+                    <h1 class="font-body animated fadeIn delay-2s">Stadious-laundry.<br>Picks up your laundry and deliver back to you.</h1>
+                        
 
                 </div>
                 <a href="#" class="btn btn-primary btn-lg disabled" tabindex="-1" role="button"
@@ -166,7 +166,7 @@
 
 <!-- <--Mannu-->
 <div id="services" class="col-md-12">
-    <h1>Emmanuel</h1>
+    <h1>SERVICES</h1>
     <div class="container-fluid">
         <div class="">
 
@@ -276,6 +276,65 @@
         </div>
 
     </div>
+</div>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top"><img src="static/icons/chevron-up.png"></button>
+<div id="contacts"  style="background: url('static/image/alexandar-todov-2ppO3geebrg-unsplash.jpg') center center no-repeat; background-size: 100%; height: 500px; background-attachment: fixed;">
+    
+    <br><br>
+    
+    <h6> Contacts</h6>
+    <div class="row">
+      <div class="col-lg-4 "styles="text-align: center;">
+        <br><br>
+        <img id="phone" src="static/icons/phone-call.png">
+        <div id="call">
+          (+254)790657234<br>
+          (+254)567890433
+        </div>
+      </div>
+      <div class="col-lg-3 quick">
+        <h3>Quick links</h3>
+        <ul>
+            <li>Services</li>
+            <li>FAQ</li>
+            <li>Contact us</li>
+            <li>Terms & Conditions</li>
+            <li>Privacy Policy</li>
+            <li>Refund Policy</li>
+            <li>Laundry</li>
+        </ul>
+    </div>
+    <div class="col-lg-2 quick">
+        <h3>Our Services</h3>
+        <ul>
+            <li>Laundry</li>
+            <li>Wash & Fold</li>
+            <li>Wash & Iron</li>
+            <li>Premium Wash</li>
+            <li>Dry Cleaning</li>
+            <li>Stain Removal </li>                    
+        </ul>
+    </div>
+     
+      <hr>
+    </div>
+    <br><br>
+    <div class="footer">
+      <div id="icons">
+        <img src="static/icons/icn_google.png">
+        <img src="static/icons/icn_instagram.png">
+        <img src="static/icons/icn_linkedin.png">
+        <img src="static/icons/icn_twitter.png">
+        <img src="static/icons/icn_facebook.png">
+      </div>
+      <br><br><br>
+     <div id="copy">By MarkMumba&copy; 2019 Stadious-laundry company</div>
+    </div>
+<br>
+  </div>
+</div>
+
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -409,6 +468,24 @@
             });
 
         });
+        
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("myBtn").style.display = "block";
+          } else {
+            document.getElementById("myBtn").style.display = "none";
+          }
+        }
+        
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+        
 
     </script>
 
@@ -476,9 +553,6 @@
     </style>
 
 </div>
-
-
-
 
 
 {% endblock%}
