@@ -1,99 +1,124 @@
 html {
     scroll-behavior: smooth;
 }
-.font-body{
+
+.font-body {
     padding-top: 200px;
     color: azure;
     font-family: 'Nunito', sans-serif;
 }
-.btn{
+
+.btn {
     font-family: 'Nunito', sans-serif;
     font-size: 30px;
     width: 240px;
-    height:70px;
+    height: 70px;
     border-radius: 80px;
     line-height: 60px;
     text-align: center;
     text-decoration: none;
     color: black;
-    
 }
-.work{
+
+header {
+    font-family: 'Nunito', sans-serif;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.work {
     font-family: 'Nunito', sans-serif;
     font-size: 15px;
     color: black;
     text-align: center;
-
-
 }
-h2{
+
+h2 {
     text-align: center;
-  font-family: 'Archivo Black', sans-serif;
-  font-size: 70px !important;
-  color: black;
-  animation-delay: 2s;
-  animation-duration: 2s
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 70px;
+    color: black;
 }
-h3{
+
+h3 {
     font-size: 21px;
     font-family: 'Archivo Black', sans-serif;
     text-transform: uppercase;
 }
-p{
-    font-weight: 500;
-}html {
-    scroll-behavior: smooth;
-}
-.font-body{
-    padding-top: 200px;
-    color: azure;
-    font-family: 'Nunito', sans-serif;
-}
-.btn{
-    font-family: 'Nunito', sans-serif;
-    font-size: 30px;
-    width: 240px;
-    height:70px;
-    border-radius: 80px;
-    line-height: 60px;
-    text-align: center;
-    text-decoration: none;
-    color: black;
-    
-}
-header{
-    font-family: 'Nunito', sans-serif;
-    background-color: rgba(255,255,255,0.9);
 
-}
-.work{
-    font-family: 'Nunito', sans-serif;
-    font-size: 15px;
-    color: black;
-    text-align: center;
-
-
-}
-h2{
-    text-align: center;
-  font-family: 'Archivo Black', sans-serif;
-  font-size: 70px;
-  color: black;
-
-}
-h3{
-    font-size: 21px;
-    font-family: 'Archivo Black', sans-serif;
-    text-transform: uppercase;
-}
-p{
+p {
     font-weight: 500;
     text-align: center;
 }
-h5{
+
+h5 {
     text-align: center;
     font-family: 'Archivo Black', sans-serif;
     font-size: 50px;
     color: black;
+}
+
+#place {
+    height: 50px;
+    width: 50px;
+}
+
+#phone {
+    height: 50px;
+    width: 50px;
+}
+
+#address {
+    font-size: 20px;
+    color: #36393a;
+}
+
+#copy {
+    color: #ffffff;
+    font-size: 20px;
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+}
+
+.quick {
+    color: azure;
+    font-family: 'Nunito', sans-serif;
+}
+
+#icons {
+    text-align: center;
+}
+
+h6 {
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    font-size: 60px;
+    color:white;
+}
+#copy{
+    background-color: black;
+}
+#phone{
+    height:50px;
+    width: 50px;
+    
+}
+#call{
+    font-size: 20px;
+    color:white;
 
 }
+#myBtn {
+    display: none;
+    /* position: fixed; */
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color:transparent;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+  }
