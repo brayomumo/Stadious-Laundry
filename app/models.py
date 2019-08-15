@@ -1,5 +1,5 @@
 from flask_security import UserMixin, RoleMixin
-
+from werkzeug.security import generate_password_hash, check_password_hash
 from . import db
 
 # Define models
@@ -23,7 +23,8 @@ class User(db.Model, UserMixin):
     first_name = db.Column(db.String(255))
     last_name = db.Column(db.String(255))
     email = db.Column(db.String(255), unique=True)
-    password = db.Column(db.String(255))
+    username = db.Column(db.String(255), index = True)
+    password_hash = db.Column(db.String(255))
     active = db.Column(db.Boolean())
     confirmed_at = db.Column(db.DateTime())
     roles = db.relationship('Role', secondary=roles_users,backref=db.backref('users', lazy='dynamic'))
