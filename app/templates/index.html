@@ -29,9 +29,9 @@
                     <h1 class="font-body animated fadeIn delay-2s">Stadious-laundry.<br>Picks up your laundry and
                         deliver back to you.</h1>
 
+
                 </div>
-                <a href="#" class="btn btn-primary btn-lg disabled" tabindex="-1" role="button"
-                    aria-disabled="true">Sign up now</a>
+                <a href="{{ url_for('auth.register') }}" class="btn btn-primary btn-sm">Lets get you started!</a>
 
             </div>
         </div>
@@ -108,7 +108,8 @@
     </div>
 </div>
 
-<br><br><br><br><br><br>
+<hr>
+<hr>
 <h5> HOW IT WORKS</h5>
 <br>
 <div class="container work">
@@ -163,333 +164,246 @@
 
 <br>
 
-<div class="col-lg-4">
-    <div class="image-gallery">
-        <img src="/static/icons/delivery-truck.png">
+
+<h1>Place your freaking order</h1>
+<hr>
+<div style="margin-left: 20px;" class="row">
+    <div class="col-md-3">
+        <h4>Top</h4>
     </div>
-    <div class="image-txt1">
-        <h3> Free Pick Up and Delivery</h3>
-        <p> we come to your residence hall or off campus apartment to pick up and deliver your laundry
-        </p>
+
+    <div class="col-md-3">
+        <h4>Prize</h4>
+        <input name="price" id="price" type="hidden" value="100" /><br />
     </div>
-</div>
 
-
-<!-- <--Mannu-->
-<div id="services" class="col-md-12">
-    <h1>Emmanuel</h1>
-    <div class="container-fluid">
-        <div class="">
-
-            <div class="whatwedo">
-
-                <br>
-                <br>
-                <br>
-                <div class="row">
-                    <div class="col-md-4 col-sm-12">
-
-
-                        <br>
-                        <br>
-                        <h3 class="one">Top</h3>
-                        <br>
-
-                        <select class="form-control size">
-                            <option label="Victoria's secret" value="500">Victoria's secret</option>
-                            <option label="Louis Vuitton" value="700">Louis Vuitton</option>
-                            <option label="Channel" value="1000">Channel</option>
-                        </select>
-                    </div>
-                    <div class="col-md-4 col-sm-12">
-
-                        <br>
-                        <br>
-                        <h3 class="two">Bottom</h3>
-                        <br>
-                        <p class='two'> We know pizza is awesome but our high quality toppings will definetely take your
-                            pizza to the next level.</p>
-
-
-                        <select class="form-control toppings">
-                            <option label="Sir Henry's" value="100">Sir Henry's</option>
-                            <option label="Gucci" value="50">Gucci</option>
-                            <option label="Addidas" value="80">Addidas</option>
-                        </select>
-
-                    </div>
-                    <div class="col-md-4 col-sm-12">
-                        <br>
-                        <br>
-                        <h3 class="three">Socks</h3>
-                        <br>
-                        <p class='three'>Your crust your choice we are here to facilitate your pizza experience to the
-                            next level. Try a different kind of crust today.</p>
-
-                        <select class="form-control crust">
-                            <option label="Happy Socks" value="500">Happy Socks</option>
-                            <option label="Cotton socks" value="200">Cotton socks</option>
-                            <option label="Silicon socks" value="300">Silicon socks</option>
-                        </select>
-
-                    </div>
-                </div>
-            </div>
-
-            <br>
-            <div class="text-center">
-                <button class="btn btn-info order" type="submit">Order</button>
-            </div>
-            <br>
-
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col">Order No.</th>
-                        <th scope="col">Top Size</th>
-                        <th scope="col">Bottom</th>
-                        <th scope="col">Socks</th>
-                        <th scope="col">Total</th>
-                    </tr>
-                </thead>
-                <tbody id="pizza">
-                    <tr>
-                        <th scope="row">1</th>
-                        <td id="size"></td>
-                        <td id="toppings"></td>
-                        <td id="crust"></td>
-                        <td id="total"></td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <div class="additional-buttons">
-                <div class="text-center">
-                    <button class="btn btn-info add-pizza" type="submit">Add Another</button>
-                    <div class="additional-info">
-                        <h3>The total is: <span></span></h3>
-                        <h5>Would you like delivery for an additional <em>200</em>?</h5>
-                        <h4>Your order has been received! We are dispatching our rider to <span></span></h4>
-                        <div class="location text-center">
-                            <input type="text" size="30" placeholder="Where do you live?" required />
-                            <button class="btn btn-info complete" type="submit">Complete</button>
-                        </div>
-                    </div>
-                    <br>
-                    <button class="btn btn-info yes" type="submit">Yes</button>
-                    <button class="btn btn-info no" type="submit">No</button>
-                </div>
-                <div class="text-right">
-                    <button class="btn btn-info check-out" type="submit">Checkout</button>
-                </div>
-            </div>
+    <div class="col-md-3">
+        <div class="form-group">
+            <input name="qty" id="qty" type="number" />
 
         </div>
-
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> -->
-    <script>
-        console.log('redbull');
-        console.log('bruh');
-        console.log(69);
+    <div class="col-md-3">
+        <input name="total" id="total" type="number" readonly />
+    </div>
+</div>
+<div style="margin-left: 20px;" class="row">
+    <div class="col-md-3">
+        <h4>Bottom</h4>
+    </div>
 
-        $(document).ready(function () {
+    <div class="col-md-3">
+        <h4>Prize</h4>
+        <input name="price1" id="price1" type="hidden" value="150" /><br />
+    </div>
 
-            $(".whatwedo p").hide();
+    <div class="col-md-3">
+        <div class="form-group">
+            <input name="qty1" id="qty1" type="number" />
 
-            $('.whatwedo img.one').click(function () {
-                $(".whatwedo img.one").toggle();
-                $(".whatwedo p.one").toggle();
-            });
-            $('.whatwedo p.one').click(function () {
-                $(".whatwedo img.one").toggle();
-                $(".whatwedo p.one").toggle();
-            });
-            $('.whatwedo img.two').click(function () {
-                $(".whatwedo img.two").toggle();
-                $(".whatwedo p.two").toggle();
-            });
-            $('.whatwedo p.two').click(function () {
-                $(".whatwedo img.two").toggle();
-                $(".whatwedo p.two").toggle();
-            });
-            $('.whatwedo img.three').click(function () {
-                $(".whatwedo img.three").toggle();
-                $(".whatwedo p.three").toggle();
-            });
-            $('.whatwedo p.three').click(function () {
-                $(".whatwedo img.three").toggle();
-                $(".whatwedo p.three").toggle();
-            });
+        </div>
+    </div>
 
-            $('.whatwedo h3').click(function () {
-                $(".whatwedo img.one").toggle();
-                $(".whatwedo p.one").toggle();
-            });
-            $('.whatwedo h3').click(function () {
-                $(".whatwedo img.one").toggle();
-                $(".whatwedo p.one").toggle();
-            });
+    <div class="col-md-3">
+        <input name="total1" id="total1" type="number" readonly />
+    </div>
+</div>
+<div style="margin-left: 20px;" class="row">
+    <div class="col-md-3">
+        <h4>Socks</h4>
+    </div>
+</div>
 
-            $("table").hide();
-            $(".additional-buttons").hide();
-            $(".additional-info").hide();
-            $(".btn.yes").hide();
-            $(".btn.no").hide();
-            $(".additional-info h4").hide();
+<div class="col-md-3">
+    <h4>Prize</h4>
+    <input name="price2" id="price2" type="hidden" value="50" /><br />
+</div>
 
-            $('.btn.order').click(function () {
-                var sizeOfPizza = $(".size option:selected").val();
-                var toppingsOfPizza = $(".toppings option:selected").val();
-                var crustOfPizza = $(".crust option:selected").val();
-                var total = parseInt(sizeOfPizza) + parseInt(toppingsOfPizza) + parseInt(crustOfPizza);
-                var order = 1;
-                var grandTotal = 0;
+<div class="col-md-3">
+    <div class="form-group">
+        <input name="qty2" id="qty2" type="number" />
 
-                $("table").show();
-                $(".additional-buttons").show();
-                $(".btn.order").hide();
+    </div>
+</div>
 
-                $("#size").html($(".size option:selected").text() + " - " + sizeOfPizza);
-                $("#toppings").html($(".toppings option:selected").text() + " - " + toppingsOfPizza);
-                $("#crust").html($(".crust option:selected").text() + " - " + crustOfPizza);
-                $("#total").html(total);
+<div class="col-md-3">
+    <input name="total2" id="total2" type="number" readonly />
+</div>
+</div>
 
-                function Pizza(size, toppings, crust, total, orderNo) {
-                    this.size = size;
-                    this.toppings = toppings;
-                    this.crust = crust;
-                    this.total = total;
-                    this.orderNo = orderNo;
-                }
+<hr>
+<h3 style="margin-left: 20px;">Grand Total</h3>
+<input name="grandTotal" id="grandTotal" type="number" />
+<hr>
+<button style="float: right;" id="btn-sum" class="btn btn-primary">Submit</button>&nbsp;
 
 
-                $('.btn.add-pizza').click(function () {
-                    var sizeOfPizza = $(".size option:selected").val();
-                    var toppingsOfPizza = $(".toppings option:selected").val();
-                    var crustOfPizza = $(".crust option:selected").val();
-                    var total = parseInt(sizeOfPizza) + parseInt(toppingsOfPizza) + parseInt(crustOfPizza);
-                    order = order + 1;
-                    grandTotal = grandTotal + total;
+<button onclick="topFunction()" id="myBtn" title="Go to top"><img src="static/icons/chevron-up.png"></button>
+<div id="contacts"
+    style="background: url('static/photos/alexandar-todov-2ppO3geebrg-unsplash.jpg') center center no-repeat; background-size: 100%; height: 500px; background-attachment: fixed;">
 
+    <br><br>
 
-                    var newPizza = new Pizza(sizeOfPizza, toppingsOfPizza, crustOfPizza, total, order);
+    <h6 style=" font-family: 'Nunito', sans-serif;
+    text-align: center;
+    font-size: 60px;
+    color:white;"> Contacts</h6>
+    <div class="row">
+        <div class="col-lg-4 " styles="text-align: center;">
+            <br><br>
+            <img id="phone" src="static/icons/phone-call.png">
+            <div id="call " style="font-size: 20px;
+        color:white;">
+                (+254)790657234<br>
+                (+254)567890433
+            </div>
+        </div>
+        <div class="col-lg-3 quick" style="color: azure;
+      font-family: 'Nunito', sans-serif;">
+            <h3>Quick links</h3>
+            <ul>
+                <li>Services</li>
+                <li>FAQ</li>
+                <li>Contact us</li>
+                <li>Terms & Conditions</li>
+                <li>Privacy Policy</li>
+                <li>Refund Policy</li>
+                <li>Laundry</li>
+            </ul>
+        </div>
+        <div class="col-lg-2 quick" style="color: azure;
+    font-family: 'Nunito', sans-serif;">
+            <h3>Our Services</h3>
+            <ul>
+                <li>Laundry</li>
+                <li>Wash & Fold</li>
+                <li>Wash & Iron</li>
+                <li>Premium Wash</li>
+                <li>Dry Cleaning</li>
+                <li>Stain Removal </li>
+            </ul>
+        </div>
 
-                    var newRow = '<tr><th scope="row">' + newPizza.orderNo + '</th><td id="size">' + $(".size option:selected").text() + " - " + newPizza.size + '</td><td id="toppings">' + $(".toppings option:selected").text() + " - " + newPizza.toppings + '</td><td id="crust">' + $(".crust option:selected").text() + " - " + newPizza.crust + '</td><td id="total">' + newPizza.total + '</td></tr>'
-
-                    $("#pizza").append(newRow);
-                });
-
-                $(".btn.check-out").click(function () {
-                    $(".btn.add-pizza").hide();
-                    $(".btn.check-out").hide();
-                    $(".additional-info").show();
-                    $(".btn.yes").show();
-                    $(".btn.no").show();
-                    $(".additional-info .location").hide();
-                    grandTotal = grandTotal + total;
-
-                    $(".additional-info h3 span").html(grandTotal);
-                });
-
-                $(".btn.yes").click(function () {
-                    $(".additional-info h5").hide();
-                    $(".btn.yes").hide();
-                    $(".btn.no").hide();
-                    $(".additional-info .location").show();
-                    $(".additional-info h3 span").html(grandTotal + 200);
-                });
-
-                $(".btn.no").click(function () {
-                    $(".additional-info h5").hide();
-                    $(".btn.yes").hide();
-                    $(".btn.no").hide();
-                    $(".additional-info .location").show();
-                });
-
-                $(".btn.complete").click(function () {
-                    var location = $(".additional-info .location input").val();
-                    $(".additional-info h4").show();
-                    $(".additional-info .location").hide();
-                    $(".additional-info h4 span").html(location);
-                });
-
-            });
-
-        });
-
-    </script>
-
-    <style>
-        .jumbotron {
-            color: rgba(0, 0, 0, 0.5);
-        }
-
-        .container-fluid {
-            margin: 0 auto;
-            width: 960px;
-        }
-
-        .whatwedo img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-        }
-
-        h1,
-        h3 {
-            text-align: center;
-        }
-
-        .pacifico {
-            font-family: 'Pacifico', cursive;
-        }
-
-        .col-md-4.col-sm-12 {
-            text-align: center;
-        }
-
-        @media only screen and (max-width: 600px) {
-            .container-fluid {
-                width: 100%;
-            }
-
-            .display-1 {
-                font-size: 2.5rem;
-            }
-        }
-
-        @media only screen and (min-width: 600px) {
-            .container-fluid {
-                width: 95%;
-            }
-        }
-
-        @media only screen and (min-width: 768px) {
-            .container-fluid {
-                width: 90%;
-            }
-        }
-
-        @media only screen and (min-width: 992px) {
-            .container-fluid {
-                width: 70%;
-            }
-        }
-
-        body {
-            font-family: 'Oswald', sans-serif;
-            color: #000;
-        }
-    </style>
-
+        <hr>
+    </div>
+    <br><br>
+    <div class="footer">
+        <div id="icons" styles="align: center;">
+            <img src="static/icons/icn_google.png">
+            <img src="static/icons/icn_instagram.png">
+            <img src="static/icons/icn_linkedin.png">
+            <img src="static/icons/icn_twitter.png">
+            <img src="static/icons/icn_facebook.png">
+        </div>
+        <br><br><br>
+        <div id="copy" style=" background-color: black; color :azure; text-align:center;  font-size: 20px;
+     font-family: 'Nunito', sans-serif;">By MarkMumba&copy; 2019 Stadious-laundry company</div>
+    </div>
+    <br>
 </div>
 
 
 
 
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+<script>
+    $(document).ready(function () {
+        var qty = $("#qty");
+        qty.keyup(function () {
+            var total = isNaN(parseInt(qty.val() * $("#price").val())) ? 0 : (qty.val() * $("#price").val())
+            $("#total").val(total);
+        });
+    });
+
+    $(document).ready(function () {
+        var qty1 = $("#qty1");
+        qty1.keyup(function () {
+            var total1 = isNaN(parseInt(qty1.val() * $("#price1").val())) ? 0 : (qty1.val() * $("#price1").val())
+            $("#total1").val(total1);
+        });
+    });
+    $(document).ready(function () {
+        var qty2 = $("#qty2");
+        qty2.keyup(function () {
+            var total2 = isNaN(parseInt(qty2.val() * $("#price2").val())) ? 0 : (qty2.val() * $("#price2").val())
+            $("#total2").val(total2);
+        });
+    });
+    $(document).ready(function () {
+        var grandTotal = $("#grandTotal");
+        ("#btn-sum").onClick(function () {
+            var grandTotal = isNaN(parseInt($("#total").val() + $("#total1").val())+ $("#total2").val())
+            $("#total2").val(total2);
+        });
+    });
+
+</script>
+
+<style>
+    .jumbotron {
+        color: rgba(0, 0, 0, 0.5);
+    }
+
+    .container-fluid {
+        margin: 0 auto;
+        width: 960px;
+    }
+
+    .whatwedo img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+    }
+
+    h1,
+    h3 {
+        text-align: center;
+    }
+
+    .pacifico {
+        font-family: 'Pacifico', cursive;
+    }
+
+    .col-md-4.col-sm-12 {
+        text-align: center;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .container-fluid {
+            width: 100%;
+        }
+
+        .display-1 {
+            font-size: 2.5rem;
+        }
+    }
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+
+
+</script>
+<style>
+    #myBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        z-index: 99;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 4px;
+    }
+</style>
 
 {% endblock%}

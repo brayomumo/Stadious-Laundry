@@ -7,7 +7,6 @@ from flask_uploads import UploadSet,configure_uploads,IMAGES
 from flask_mail import Mail
 from flask_admin.contrib import sqla
 import flask_admin
-from .models import MyModelView
 from flask_admin import helpers as admin_helpers
 from flask_admin import BaseView, expose
 
