@@ -165,144 +165,75 @@
 
 
 <!-- <--Mannu-->
-
-        <div class="form-group">
-               <input type="number" name="quantity" min="1">
-               
-                </div>
-                </div>
-            
-            
-                <div class="panel-footer">
-                    <div class="row">
-                    <div class="col-sm-6 col-sm-offset-3">
-                    <button class="btn btn-primary">Submit</button>&nbsp;
-                    <button class="btn btn-default">Cancel</button>
-                    </div>
-                    </div>
-                    </div>
-
-
-
-
-
-
-
-<div id="services" class="col-md-12">
-    <h1>Emmanuel</h1>
-    <div class="container-fluid">
-        <div class="">
-
-            <div class="whatwedo">
-
-                <br>
-                <br>
-                <br>
-                <div class="row">
-                    <div class="col-md-4 col-sm-12">
-
-
-                        <br>
-                        <br>
-                        <h3 class="one">Top</h3>
-                        <br>
-
-                        <select class="form-control size">
-                            <option label="Victoria's secret" value="500">Victoria's secret</option>
-                            <option label="Louis Vuitton" value="700">Louis Vuitton</option>
-                            <option label="Channel" value="1000">Channel</option>
-                        </select>
-                    </div>
-                    <div class="col-md-4 col-sm-12">
-
-                        <br>
-                        <br>
-                        <h3 class="two">Bottom</h3>
-                        <br>
-                        <p class='two'> We know pizza is awesome but our high quality toppings will definetely take your
-                            pizza to the next level.</p>
-
-
-                        <select class="form-control toppings">
-                            <option label="Sir Henry's" value="100">Sir Henry's</option>
-                            <option label="Gucci" value="50">Gucci</option>
-                            <option label="Addidas" value="80">Addidas</option>
-                        </select>
-
-                    </div>
-                    <div class="col-md-4 col-sm-12">
-                        <br>
-                        <br>
-                        <h3 class="three">Socks</h3>
-                        <br>
-                        <p class='three'>Your crust your choice we are here to facilitate your pizza experience to the
-                            next level. Try a different kind of crust today.</p>
-
-                        <select class="form-control crust">
-                            <option label="Happy Socks" value="500">Happy Socks</option>
-                            <option label="Cotton socks" value="200">Cotton socks</option>
-                            <option label="Silicon socks" value="300">Silicon socks</option>
-                        </select>
-
-                    </div>
-                </div>
-            </div>
-
-            <br>
-            <div class="text-center">
-                <button class="btn btn-info order" type="submit">Order</button>
-            </div>
-            <br>
-
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col">Order No.</th>
-                        <th scope="col">Top Size</th>
-                        <th scope="col">Bottom</th>
-                        <th scope="col">Socks</th>
-                        <th scope="col">Total</th>
-                    </tr>
-                </thead>
-                <tbody id="pizza">
-                    <tr>
-                        <th scope="row">1</th>
-                        <td id="size"></td>
-                        <td id="toppings"></td>
-                        <td id="crust"></td>
-                        <td id="total"></td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <div class="additional-buttons">
-                <div class="text-center">
-                    <button class="btn btn-info add-pizza" type="submit">Add Another</button>
-                    <div class="additional-info">
-                        <h3>The total is: <span></span></h3>
-                        <h5>Would you like delivery for an additional <em>200</em>?</h5>
-                        <h4>Your order has been received! We are dispatching our rider to <span></span></h4>
-                        <div class="location text-center">
-                            <input type="text" size="30" placeholder="Where do you live?" required />
-                            <button class="btn btn-info complete" type="submit">Complete</button>
-                        </div>
-                    </div>
-                    <br>
-                    <button class="btn btn-info yes" type="submit">Yes</button>
-                    <button class="btn btn-info no" type="submit">No</button>
-                </div>
-                <div class="text-right">
-                    <button class="btn btn-info check-out" type="submit">Checkout</button>
-                </div>
-            </div>
-
-        </div>
-
+<h1>Place your freaking order</h1>
+<hr>
+<div style="margin-left: 20px;" class="row">
+    <div class="col-md-3">
+        <h3>Top</h3>
     </div>
+
+    <div class="col-md-3">
+        <h3>Price</h3>
+    </div>
+
+    <div class="col-md-3">
+        <div class="form-group">
+            <input type="number" name="quantity" min="1">
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <h3>Total</h3>
+    </div>
+</div>
+<div style="margin-left: 20px;" class="row">
+    <div class="col-md-3">
+        <h3>Bottom</h3>
+    </div>
+
+    <div class="col-md-3">
+        <h3>Price</h3>
+    </div>
+
+    <div class="col-md-3">
+        <div class="form-group">
+            <input type="number" name="quantity" min="1">
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <h3>Total</h3>
+    </div>
+</div>
+<div style="margin-left: 20px;" class="row">
+    <div class="col-md-3">
+        <h3>Socks</h3>
+    </div>
+
+    <div class="col-md-3">
+        <h3>Price</h3>
+    </div>
+
+    <div class="col-md-3">
+        <div class="form-group">
+            <input type="number" name="quantity" min="1">
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <h3>Total</h3>
+    </div>
+</div>
+<hr>
+<h3 style="margin-left: 20px;">Grand Total</h3>
+<hr>
+<button style="float: right;" class="btn btn-primary">Submit</button>&nbsp;
+
+
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    
+
     <script>
         console.log('redbull');
         console.log('bruh');
