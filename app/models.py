@@ -1,10 +1,10 @@
-from . import create_app,db
-from flask_security import Security,SQLAlchemyUserDatastore, UserMixin,RoleMixin,login_required,current_user
-from werkzeug.security import generate_password_hash,check_password_hash
-
-
-
+from flask_security import UserMixin, RoleMixin
+from werkzeug.security import generate_password_hash, check_password_hash
+from . import db
+from flask_admin.contrib import sqla
+from flask_admin import BaseView, expose
 # Define models
+
 roles_users = db.Table(
     'roles_users',
     db.Column('user_id', db.Integer(), db.ForeignKey('user.id')),
@@ -18,18 +18,38 @@ class Role(db.Model, RoleMixin):
     def __str__(self):
         return self.name
 
-    class User(db.Model, UserMixin):
-        id = db.Column(db.Integer, primary_key=True)
-        first_name = db.Column(db.String(255))
-        last_name = db.Column(db.String(255))
-        email = db.Column(db.String(255), unique=True)
-        password = db.Column(db.String(255))
-        active = db.Column(db.Boolean())
-        confirmed_at = db.Column(db.DateTime())
-        roles = db.relationship('Role', secondary=roles_users,backref=db.backref('users', lazy='dynamic'))
+class User(db.Model, UserMixin):
+
+    id = db.Column(db.Integer, primary_key=True)
+    first_name = db.Column(db.String(255))
+    last_name = db.Column(db.String(255))
+    email = db.Column(db.String(255), unique=True)
+    username = db.Column(db.String(255), index = True)
+    password_hash = db.Column(db.String(255))
+    active = db.Column(db.Boolean())
+    # item = db.relationship('Item', backref='user', lazy='dynamic')
+    confirmed_at = db.Column(db.DateTime())
+    roles = db.relationship('Role', secondary=roles_users,backref=db.backref('users', lazy='dynamic'))
+    @property
+    def password(self):
+        raise AttributeError('You cannot read the password attribute')
+
+    @password.setter
+    def password(self, password):
+        self.password_hash = generate_password_hash(password)
+
+    def verify_password(self, password):
+        return check_password_hash(self.password_hash, password)
+
+    def __repr__(self):
+        return f'User {self.username}'
     
-        def __str__(self):
-            return self.email
+    
+    
+    def __str__(self):
+        return self.email
+    
+    
     
 # Create customized model view class
 class MyModelView(sqla.ModelView):
@@ -76,3 +96,11 @@ class CustomView(BaseView):
     @expose('/')
     def index(self):
         return self.render('admin/custom_index.html')
+    class Item (db.Model):
+
+        __tablename__ = "items"
+
+        id = db.Column(db.Integer, primary_key=True)
+        owner_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
+        itemName = db.Column(db.String())
+        itemPrice= db.Column(db.Integer())

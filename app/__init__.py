@@ -7,6 +7,7 @@ from flask_uploads import UploadSet,configure_uploads,IMAGES
 from flask_mail import Mail
 from flask_admin.contrib import sqla
 import flask_admin
+from .models import MyModelView
 from flask_admin import helpers as admin_helpers
 from flask_admin import BaseView, expose
 
@@ -36,14 +37,9 @@ def create_app(config_name):
     db.init_app(app)
     login_manager.init_app(app)
     mail.init_app(app)
-    # Add model views
-    admin.add_view(MyModelView(Role, db.session, menu_icon_type='fa', menu_icon_value='fa-server', name="Roles"))
-    admin.add_view(UserView(User, db.session, menu_icon_type='fa', menu_icon_value='fa-users', name="Users"))
-    admin.add_view(CustomView(name="Custom view", endpoint='custom', menu_icon_type='fa', menu_icon_value='fa-connectdevelop',))
-
-
-    #config uploadset
-    configure_uploads(app, photos)
+    
+    # #config uploadset
+    # configure_uploads(app, photos)
 
     #Registering bluprints
     from .main import main as main_blueprint

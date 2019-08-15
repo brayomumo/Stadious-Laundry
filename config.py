@@ -1,7 +1,7 @@
 import os
 
 class Config:
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://smoucha:mumo@localhost/laundry'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://mannuh:123@localhost/laundry'
     SECRET_KEY = os.environ.get('SECRET_KEY')
     MAIL_SERVER = 'smtp.googlemail.com'
     MAIL_PORT = 587
@@ -26,6 +26,10 @@ class Config:
 
 
 
+    # simple mde  configurations
+    SIMPLEMDE_JS_IIFE = True
+    SIMPLEMDE_USE_CDN = True
+    
     @staticmethod
     def init_app(app):
         pass
