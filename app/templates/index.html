@@ -234,8 +234,9 @@
 
 <hr>
 <h3 style="margin-left: 20px;">Grand Total</h3>
+<input name="grandTotal" id="grandTotal" type="number" />
 <hr>
-<button style="float: right;" class="btn btn-primary">Submit</button>&nbsp;
+<button style="float: right;" id="btn-sum" class="btn btn-primary">Submit</button>&nbsp;
 
 
 <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="static/icons/chevron-up.png"></button>
@@ -331,13 +332,52 @@
             $("#total2").val(total2);
         });
     });
-    // When the user scrolls down 20px from the top of the document, show the button
-    window.onscroll = function () { scrollFunction() };
-    function scrollFunction() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            document.getElementById("myBtn").style.display = "block";
-        } else {
-            document.getElementById("myBtn").style.display = "none";
+    $(document).ready(function () {
+        var grandTotal = $("#grandTotal");
+        ("#btn-sum").onClick(function () {
+            var grandTotal = isNaN(parseInt($("#total").val() + $("#total1").val())+ $("#total2").val())
+            $("#total2").val(total2);
+        });
+    });
+
+</script>
+
+<style>
+    .jumbotron {
+        color: rgba(0, 0, 0, 0.5);
+    }
+
+    .container-fluid {
+        margin: 0 auto;
+        width: 960px;
+    }
+
+    .whatwedo img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+    }
+
+    h1,
+    h3 {
+        text-align: center;
+    }
+
+    .pacifico {
+        font-family: 'Pacifico', cursive;
+    }
+
+    .col-md-4.col-sm-12 {
+        text-align: center;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .container-fluid {
+            width: 100%;
+        }
+
+        .display-1 {
+            font-size: 2.5rem;
         }
     }
     // When the user clicks on the button, scroll to the top of the document
