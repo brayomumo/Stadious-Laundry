@@ -8,7 +8,8 @@ from flask_mail import Mail
 from flask_admin.contrib import sqla
 import flask_admin
 from flask_admin import helpers as admin_helpers
-from flask_admin import BaseView, expose
+from flask_admin import BaseView, expose,Admin
+from flask_admin.contrib.sqla import ModelView
 
 #flask extensions
 login_manager = LoginManager()
@@ -36,6 +37,7 @@ def create_app(config_name):
     db.init_app(app)
     login_manager.init_app(app)
     mail.init_app(app)
+
     
     # #config uploadset
     # configure_uploads(app, photos)
