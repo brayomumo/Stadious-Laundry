@@ -56,16 +56,15 @@ class MicroBlogModelView(sqla.ModelView):
         return redirect(url_for('login', next=request.url))
 
     
-class Item (db.Model,UserMixin):
-    __tablename__ = "items"
-    id = db.Column(db.Integer, primary_key=True)
-    owner_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
-    itemName = db.Column(db.String())
-    itemPrice= db.Column(db.Integer())
-
-    @classmethod
-    def get_items(cls,id):
-        items = Item.query.order_by(item_id=id).desc().all()
-        return items
-    def __repr__(self):
-        return f'Item {self.itemName, itemPrice}'
+# class Item (db.Model,UserMixin):
+#     __tablename__ = "items"
+#     id = db.Column(db.Integer, primary_key=True)
+#     owner_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
+#     itemName = db.Column(db.String())
+#     itemPrice= db.Column(db.Integer())
+# @classmethod
+# def get_items(cls,id):
+#     items = Item.query.order_by(item_id=id).desc().all()
+#     return items
+# def __repr__(self):
+#     return f'Item {self.itemName, itemPrice}'

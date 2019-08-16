@@ -31,7 +31,8 @@
 
 
                 </div>
-                <a href="{{ url_for('auth.register') }}" class="btn btn-primary btn-sm">Lets get you started!</a>
+                <a href="{{ url_for('auth.register') }}" class="btn btn-primary btn-lg" style="color: black;">Lets get
+                    started!</a>
 
             </div>
         </div>
@@ -239,6 +240,18 @@
 <button style="float: right;" id="btn-sum" class="btn btn-primary">Submit</button>&nbsp;
 
 
+
+<div class="maps"
+    style="background: url('static/photos/tatiana-rodriguez-0vjvsPijSsA-unsplash.jpg') center center no-repeat; background-size: 100%; height: 300px; background-attachment: fixed; ">
+    <div class="loc" style="padding-left: 800px;padding-top: 140px;">
+        <i class="glyphicon glyphicon-map-marker " aria-hidden="true"></i> <a target="_blank"
+            href="https://www.google.com/maps/search/?api=1&query=laundry_shops" style="color:rgb(14, 13, 13)"
+            style="font-size:xx-large">
+            <div class="btn btn-primary btn-lg">Get location</div>
+        </a></div>
+</div>
+
+<hr>
 <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="static/icons/chevron-up.png"></button>
 <div id="contacts"
     style="background: url('static/photos/alexandar-todov-2ppO3geebrg-unsplash.jpg') center center no-repeat; background-size: 100%; height: 500px; background-attachment: fixed;">
@@ -298,7 +311,7 @@
         </div>
         <br><br><br>
         <div id="copy" style=" background-color: black; color :azure; text-align:center;  font-size: 20px;
-     font-family: 'Nunito', sans-serif;">By MarkMumba&copy; 2019 Stadious-laundry company</div>
+     font-family: 'Nunito', sans-serif;">By Mark/Brian/Sarah/Emmanuel/Janice&copy; 2019 Stadious-laundry company</div>
     </div>
     <br>
 </div>
@@ -335,10 +348,25 @@
     $(document).ready(function () {
         var grandTotal = $("#grandTotal");
         ("#btn-sum").onClick(function () {
-            var grandTotal = isNaN(parseInt($("#total").val() + $("#total1").val())+ $("#total2").val())
+            var grandTotal = isNaN(parseInt($("#total").val() + $("#total1").val()) + $("#total2").val())
             $("#total2").val(total2);
         });
     });
+
+       // When the user scrolls down 20px from the top of the document, show the button
+       window.onscroll = function () { scrollFunction() };
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("myBtn").style.display = "block";
+        } else {
+            document.getElementById("myBtn").style.display = "none";
+        }
+    }
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
 
 </script>
 
@@ -358,7 +386,6 @@
         border-radius: 50%;
     }
 
-    h1,
     h3 {
         text-align: center;
     }
@@ -380,15 +407,7 @@
             font-size: 2.5rem;
         }
     }
-    // When the user clicks on the button, scroll to the top of the document
-    function topFunction() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-    }
 
-
-</script>
-<style>
     #myBtn {
         display: none;
         position: fixed;
@@ -406,4 +425,7 @@
     }
 </style>
 
+    
+    
 {% endblock%}
+    
