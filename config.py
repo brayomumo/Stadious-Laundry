@@ -1,14 +1,9 @@
 import os
 
 class Config:
-<<<<<<< HEAD
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://mark:123@localhost/laundry'
-    SECRET_KEY = os.environ.get('SECRET_KEY')
-=======
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://mannuh:123@localhost/laundry'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:crazy@localhost/laundry'
     # SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://smoucha:mumo@localhost/laundry'
     SECRET_KEY = 'mannuh'
->>>>>>> 5b6457d5de9374e9f03301f866d9ffa1c621e708
     MAIL_SERVER = 'smtp.googlemail.com'
     MAIL_PORT = 587
     MAIL_USE_TLS = True
