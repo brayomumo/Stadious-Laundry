@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-<!-- {% import "bootstrap/wtf.html" as html%} -->
+{% import "bootstrap/wtf.html" as html%}
 
 {% block styles %}
 {{ super () }}
@@ -26,7 +26,7 @@
         <div class="row ">
             <div class="col-lg-6 col-md-8">
                 <div class="emphasis-title">
-                    <h1 class="font-body animated fadeIn delay-2s">Stadious-laundry.<br>Picks up your laundry and
+                    <h1 class="font-body animated fadeIn delay-2s" style="color: #000;">Stadious-laundry.<br>Picks up your laundry and
                         deliver back to you.</h1>
 
 
@@ -165,81 +165,83 @@
 
 <br>
 
-
-<h1>Place your freaking order</h1>
-<hr>
-<div style="margin-left: 20px;" class="row">
-    <div class="col-md-3">
-        <h4>Top</h4>
-    </div>
-
-    <div class="col-md-3">
-        <h4>Prize</h4>
-        <input name="price" id="price" type="hidden" value="100" /><br />
-    </div>
-
-    <div class="col-md-3">
-        <div class="form-group">
-            <input name="qty" id="qty" type="number" />
-
+<div class="jumbotron">
+        <h1 style="text-align: center;">Place your freaking order</h1>
+        <hr>
+        
+        <div class="row">
+            <div class="col-md-3">
+                <h4 style="margin-left: 30px;">Top</h4>
+            </div>
+        
+            <div class="col-md-3">
+                <h4>Ksh 100 /piece</h4>
+                <input name="price" id="price" type="hidden" value="100" /><br />
+            </div>
+        
+            <div class="col-md-3">
+                <div class="form-group">
+                    <input name="qty" id="qty" type="number" />
+        
+                </div>
+            </div>
+        
+            <div class="col-md-3">
+                <input name="total" id="total" type="number" readonly />
+            </div>
         </div>
-    </div>
-
-    <div class="col-md-3">
-        <input name="total" id="total" type="number" readonly />
-    </div>
-</div>
-<div style="margin-left: 20px;" class="row">
-    <div class="col-md-3">
-        <h4>Bottom</h4>
-    </div>
-
-    <div class="col-md-3">
-        <h4>Prize</h4>
-        <input name="price1" id="price1" type="hidden" value="150" /><br />
-    </div>
-
-    <div class="col-md-3">
-        <div class="form-group">
-            <input name="qty1" id="qty1" type="number" />
-
+        <div class="row">
+            <div class="col-md-3">
+                <h4 style="margin-left: 30px;">Bottom</h4>
+            </div>
+        
+            <div class="col-md-3">
+                <h4>Ksh 150 /piece</h4>
+                <input name="price1" id="price1" type="hidden" value="150" /><br />
+            </div>
+        
+            <div class="col-md-3">
+                <div class="form-group">
+                    <input name="qty1" id="qty1" type="number" />
+        
+                </div>
+            </div>
+        
+            <div class="col-md-3">
+                <input name="total1" id="total1" type="number" readonly />
+            </div>
         </div>
-    </div>
-
-    <div class="col-md-3">
-        <input name="total1" id="total1" type="number" readonly />
-    </div>
-</div>
-<div style="margin-left: 20px;" class="row">
-    <div class="col-md-3">
-        <h4>Socks</h4>
-    </div>
-</div>
-
-<div class="col-md-3">
-    <h4>Prize</h4>
-    <input name="price2" id="price2" type="hidden" value="50" /><br />
-</div>
-
-<div class="col-md-3">
-    <div class="form-group">
-        <input name="qty2" id="qty2" type="number" />
-
-    </div>
-</div>
-
-<div class="col-md-3">
-    <input name="total2" id="total2" type="number" readonly />
-</div>
+        <div class="row">
+            <div class="col-md-3">
+                <h4 style="margin-left: 30px;">Socks</h4>
+            </div>
+        
+            <div class="col-md-3">
+                <h4>Ksh 50 /piece</h4>
+                <input name="price2" id="price2" type="hidden" value="50" /><br />
+            </div>
+        
+            <div class="col-md-3">
+                <div class="form-group">
+                    <input name="qty2" id="qty2" type="number" />
+        
+                </div>
+            </div>
+        
+            <div class="col-md-3">
+                <input name="total2" id="total2" type="number" readonly />
+            </div>
+        </div>
 </div>
 
-<hr>
-<h3 style="margin-left: 20px;">Grand Total</h3>
-<input name="grandTotal" id="grandTotal" type="number" />
-<hr>
-<button style="float: right;" id="btn-sum" class="btn btn-primary">Submit</button>&nbsp;
+<button onclick="topFunction()" style="float: right;" id="btn-sum" class="btn btn-primary">Checkout</button>&nbsp;
+<hr><hr><hr>
+<div style="float: right;" class="col-xs-4" id="price-content">
+        <h1 class="page-header">Grand Total</h1>
+        <h3>Price: Ksh <span id="final-cost"></span></h3>
+</div>
 
-
+<hr><hr><hr><hr><hr><hr>
 
 <div class="maps"
     style="background: url('static/photos/tatiana-rodriguez-0vjvsPijSsA-unsplash.jpg') center center no-repeat; background-size: 100%; height: 300px; background-attachment: fixed; ">
@@ -253,6 +255,7 @@
 
 <hr>
 <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="static/icons/chevron-up.png"></button>
+<hr><hr>
 <div id="contacts"
     style="background: url('static/photos/alexandar-todov-2ppO3geebrg-unsplash.jpg') center center no-repeat; background-size: 100%; height: 500px; background-attachment: fixed;">
 
