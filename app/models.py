@@ -20,8 +20,23 @@ class User(db.Model, UserMixin):
     confirmed_at = db.Column(db.DateTime())
     role_id = db.Column(db.Integer,db.ForeignKey('role.id'))    
     
-    def __str__(self):
-        return self.email
+    @property
+    def password(self):
+        raise AttributeError("You cannot read the password attribute")
+
+    @password.setter
+    def password(self,password):
+        self.password_hash = generate_password_hash(password)
+
+    def verify_password(self,password):
+        return check_password_hash(self.password_hash,password)
+
+    def save_user(self):
+        db.session.add(self)
+        db.session.commit()
+
+    def __repr__(self):
+        return f'User{self.username}'
 
 class Role(db.Model, RoleMixin):
     id = db.Column(db.Integer,primary_key = True)
@@ -41,16 +56,15 @@ class MicroBlogModelView(sqla.ModelView):
         return redirect(url_for('login', next=request.url))
 
     
-class Item (db.Model,UserMixin):
-    __tablename__ = "items"
-    id = db.Column(db.Integer, primary_key=True)
-    owner_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
-    itemName = db.Column(db.String())
-    itemPrice= db.Column(db.Integer())
-
-    @classmethod
-    def get_items(cls,id):
-        items = Item.query.order_by(item_id=id).desc().all()
-        return items
-    def __repr__(self):
-        return f'Item {self.itemName, itemPrice}'
+# class Item (db.Model,UserMixin):
+#     __tablename__ = "items"
+#     id = db.Column(db.Integer, primary_key=True)
+#     owner_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
+#     itemName = db.Column(db.String())
+#     itemPrice= db.Column(db.Integer())
+# @classmethod
+# def get_items(cls,id):
+#     items = Item.query.order_by(item_id=id).desc().all()
+#     return items
+# def __repr__(self):
+#     return f'Item {self.itemName, itemPrice}'
